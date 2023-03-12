@@ -1,6 +1,11 @@
-import {AirplaneFactory} from './Airplane/AirplaneFactory'
+import { cargoAirPlaneFactory } from './Airplane/ConcreteFactory/CCargoAirplaneFactory'
+import { passengerAirplane } from './Airplane/ConcreteFactory/CPassengerAirPlaneFactory'
 
-const airplaneFactory = new AirplaneFactory()
-const embraerE195 = airplaneFactory.create('SP-ABC', "Embraer", "E195")
+const E195 = passengerAirplane.create('PR-ABC', "Embraer", "E195", 118)
+console.table(E195)
 
-console.table(embraerE195)
+E195.buyTicket()
+
+const KC390 = cargoAirPlaneFactory.create("PR-DEF", "Boeing", "B747", 137)
+console.table(KC390)
+KC390.loadCargo(500)

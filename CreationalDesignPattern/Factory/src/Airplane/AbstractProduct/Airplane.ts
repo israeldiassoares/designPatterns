@@ -1,16 +1,16 @@
-export class Airplane implements IAirplane {
+export abstract class Airplane implements IAirplane {
 
     constructor(
         private _prefix: string,
-        private _manufacture: string,
+        private _manufacturer: string,
         private _aircraft: string
     ) { }
 
     get prefix(): string {
         return this._prefix
     }
-    get manufacture(): string {
-        return this._manufacture
+    get manufacturer(): string {
+        return this._manufacturer
     }
     get aircraft(): string {
         return this._aircraft

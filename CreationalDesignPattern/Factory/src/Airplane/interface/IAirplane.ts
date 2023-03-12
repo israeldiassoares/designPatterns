@@ -1,5 +1,5 @@
 interface IAirplane {
     prefix: string,
-    manufacture: string,
+    manufacturer: string,
     aircraft: string
 }
